@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StreamQash is a leading online platform that provides multiple streams of income, including affiliate marketing, trivia, and video ads. Transform your financial life today!">
+  <meta name="keywords" content="StreamQash, online earning, affiliate marketing, trivia questions, video ads, make money online, passive income, financial freedom">
+  <meta name="author" content="StreamQash Team">
+  
+  <!-- Open Graph Meta Tags for Social Sharing -->
+  <meta property="og:title" content="StreamQash - Transform Your Financial Life Online">
+  <meta property="og:description" content="Discover how StreamQash helps you earn money online through affiliate marketing, trivia, and more. Start your journey to financial freedom today!">
+  <meta property="og:image" content="background.jpg">
+  <meta property="og:url" content="https://streamqash.com">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="StreamQash - Transform Your Financial Life Online">
+  <meta name="twitter:description" content="Earn money online with StreamQash! Engage in affiliate marketing, trivia, and video ads to boost your income.">
+  <meta name="twitter:image" content="background.jpg">
+  
+  <!-- Robots and Canonical URL -->
+  <meta name="robots" content="index, follow">
+  
+  <title>StreamQash - Transform Your Financial Life Online</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="">
+  <style>
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.mobile-menu {
+  display: none;
+  width: 200px;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-menu ul li {
+  margin: 10px 0;
+}
+
+.mobile-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu.show {
+    display: block;
+  }
+}
+
+
+.hero {
+    margin-top: 60px;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 60vh;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #1c0031;
+}
+
+.media-logos span {
+  margin: 0 10px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.reviews {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 0;
+  background-color: #f5f5f5;
+}
+
+.feature {
+  text-align: center;
+}
+
+.cta {
+  text-align: center;
+  padding: 20px;
+}
+
+.get-started,
+.join-btn {
+  background-color: #0056ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.get-started:hover,
+.join-btn:hover {
+  background-color: #003bbd;
+}
+.blog-section {
+    padding: 40px 20px;
+    background-color: #4F9044;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.blog-section h2 {
+    font-size: 1.4rem;
+    color: #C70D20;
+    margin-bottom: 20px;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-post {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+}
+
+.blog-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-post h3 {
+    font-size: 1.5rem;
+    margin: 15px 10px;
+    color: #333;
+}
+
+.blog-post p {
+    margin: 10px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.blog-post .read-more {
+    display: inline-block;
+    margin: 15px 10px;
+    padding: 10px 20px;
+    background: #0056D2;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.blog-post .read-more:hover {
+    background: #003a8d;
+}
+/* FAQ Section */
+        .faq {
+            padding: 2rem;
+            background: #D4C8EE;
+            margin-top: 2rem;
+            border-radius: 20px;
+           
+            
+        }
+
+        .faq h2 {
+            font-size: 1.3rem;
+            text-align: center;
+            color: #590DF7;
+        }
+
+        .faq details {
+            margin: 1rem 0;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .faq details summary {
+            font-weight: bold;
+        }
+        /* General Reset */
+
+/* Testimonials Section */
+.testimonials {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #ffffff, #f0f4ff);
+  text-align: center;
+}
+
+/* Section Header */
+.testimonials-header h2 {
+  font-size: 2rem;
+  color: #1e3a8a;
+}
+
+.testimonials-header p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Carousel */
+.testimonials-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  flex: 0 0 300px;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial-card h3 {
+  font-size: 1.2rem;
+  color: #1e3a8a;
+}
+
+.location {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.rating span {
+  color: #ffc107;
+  font-size: 1.2rem;
+}
+
+.testimonial-text {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Call-to-Action */
+.cta {
+  margin-top: 30px;
+}
+
+.cta h3 {
+  font-size: 1.5rem;
+  color: #1e3a8a;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background: #1e3a8a;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #16356d;
+}
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .feature1 {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .feature1 img {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+        .feature1 p {
+            margin: 0;
+            font-size: 16px;
+            color: #555;
+        }
+        .cta {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .cta a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4c6ef5;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .cta a:hover {
+            background-color: #3b5bdb;
+        }
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #888;
+            margin-top: 15px;
+        }
+        /* Earnings Section */
+.earnings {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #f0f4ff, #ffffff);
+  text-align: center;
+}
+
+.earnings-header h2 {
+  font-size: 2rem;
+  color: #1e3a8a;
+}
+
+.earnings-header p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Earnings Grid */
+.earnings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  padding: 0 10px;
+}
+
+.earning-method {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+}
+
+.earning-method:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.earning-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.earning-method h3 {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  color: #1e3a8a;
+}
+
+.earning-method p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .earnings-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  
+
+
+
+  </style>
+</head>
+<body>
+<header class="fixed-header">
+  <div class="logo">STREAMQASH</div>
+ <a href="#"><button class="get-started">Get Started</button></a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <nav class="mobile-menu">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Work from the comfort of your home.</h1>
+      <p>As seen on:</p>
+      <div class="media-logos">
+        <span>BuzzFeed</span>
+        <span>Independent</span>
+        <span>yahoo/news</span>
+        <span>Apple News</span>
+      </div>
+      <div class="reviews">
+        <img src="indeed-logo.png" alt="Indeed logo">
+        <span>4.6 from 145 reviews</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <p>Millions Paid out</p>
+    </div>
+    <div class="feature">
+      <p>From $20 an Hour</p>
+    </div>
+    <div class="feature">
+      <p>100k+ Members</p>
+    </div>
+  </section>
+  
+
+  <section class="cta">
+    <p>
+      Tens of millions of dollars have been paid out to our dedicated members as they transform AI.
+    </p>
+    <a href="#"><button class="join-btn">Join the Community</button></a>
+  </section>
+  
+  <section id="about" style="background-color: #e9f5ff; padding: 60px 20px; text-align: center;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto;">
+    <h2 style="font-size: 36px; color: #003366; margin-bottom: 20px;">What is StreamQash Agencies?</h2>
+    <p style="font-size: 18px; color: #333; line-height: 1.6; max-width: 800px; margin: 0 auto; padding-bottom: 30px;">
+      StreamQash Agencies is an innovative online platform that provides multiple streams to earn income through digital and network marketing. With StreamQash, users can tap into various opportunities to generate revenue, whether through managing referrals, promoting services, or expanding their reach. The platform empowers users to create scalable income streams by leveraging the power of online networks, offering flexible earning potential and the tools to succeed in the digital economy. It's the perfect solution for businesses and individuals looking to transform their financial future.
+    </p>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+      <div style="max-width: 800px; background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <h3 style="font-size: 24px; color: #003366; margin-bottom: 10px;">Diverse Earning Opportunities</h3>
+        <p style="color: #666;">StreamQash Agencies provides multiple ways to earn, making it easy to choose a path that suits your skills and interests.</p>
+      </div>
+      <div style="max-width: 800px; background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <h3 style="font-size: 24px; color: #003366; margin-bottom: 10px;">Scalable Income</h3>
+        <p style="color: #666;">Grow your income by expanding your network, managing referrals, and unlocking new revenue streams as you scale.</p>
+      </div>
+      <div style="max-width: 800px; background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <h3 style="font-size: 24px; color: #003366; margin-bottom: 10px;">Transform Your Financial Future</h3>
+        <p style="color: #666;">StreamQash Agencies helps you achieve financial independence with the tools, support, and opportunities to thrive online.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  
+   <!-- How We Make It Happen Section -->
+  <section class="earnings" ID="features">
+    <!-- Section Header -->
+    <div class="earnings-header">
+      <h2>How We Make It Happen</h2>
+      <p>Explore the multiple ways you can earn with StreamQash .</p>
+    </div>
+
+    <!-- Earnings Methods -->
+    <div class="earnings-grid">
+      <!-- Method 1 -->
+      <div class="earning-method">
+        <img src="affiliate.webp" alt="Network marketing" class="earning-image">
+        <h3>Affiliate Marketing Bonuses</h3>
+        <p>Affiliate marketing on StreamQash allows you to earn commissions by promoting products or services to others. You can share referral links with friends or through your social media, and whenever someone makes a purchase or takes an action using your link, you earn a percentage of the sale. This is a fantastic opportunity for users who enjoy networking or have a social following, as it provides an income stream based on your promotional efforts.</p>
+      </div>
+
+      <!-- Method 2 -->
+      <div class="earning-method">
+        <img src="trivia.jpg" alt="Trivia Games to earn" class="earning-image">
+        <h3>Trivia Questions</h3>
+        <p>Trivia games are fun and engaging, and StreamQash uses them as an interactive way for users to earn money. By answering trivia questions correctly, you accumulate points or direct earnings. It's not only a way to test your knowledge but also a great way to earn money while enjoying the challenge. The more questions you answer correctly, the higher your potential earnings.</p>
+      </div>
+
+      <!-- Method 3 -->
+      <div class="earning-method">
+        <img src="video.jpg" alt="Watch Videos to earn" class="earning-image">
+        <h3>Watch Promoted Videos</h3>
+        <p>StreamQash partners with brands and businesses to promote their products or services through video ads. As a user, you can watch these short, engaging videos, and in return, you earn a payout. This method is an easy way to earn money while enjoying interesting content. The more videos you watch, the more you can earn, creating a passive income stream.</p>
+      </div>
+
+      <!-- Method 4 -->
+      <div class="earning-method">
+        <img src="ads.jpg" alt="Earn per click" class="earning-image">
+        <h3>Clicking Sponsored Ads</h3>
+        <p>Sponsored ads are an essential part of the digital marketing world, and StreamQash allows you to earn by simply clicking on these ads. When you engage with these ads, the advertisers pay you for driving traffic to their website or service. This method requires minimal effort, and by regularly clicking on these ads, you can steadily grow your earnings.</p>
+      </div>
+    </div>
+  </section>
+
+    <div class="container">
+       <h1>Flexible work and transparent pay!</h1>
+<div class="feature1">
+    <i class="fas fa-briefcase" style="font-size: 50px;"></i>
+    <p>Flexible hours</p>
+</div>
+<div class="feature1">
+    <i class="fas fa-laptop-house" style="font-size: 50px;"></i>
+    <p>Work from anywhere</p>
+</div>
+<div class="feature1">
+    <i class="fas fa-graduation-cap" style="font-size: 50px;"></i>
+    <p>Free training</p>
+</div>
+<div class="feature1">
+    <i class="fas fa-credit-card" style="font-size: 50px;"></i>
+    <p>Transparent pay</p>
+</div>
+        <div class="cta">
+            <a href="https://www.streamwa-ve.com/user/register.php?ref=RayaSTAMETS">Get Started Today!</a>
+        </div>
+  
+  <section id="blog" class="blog-section">
+    <div class="container">
+        <h2>Guides to help you Grow</h2>
+        <div class="blog-grid">
+            <!-- Blog Post 1 -->
+            <article class="blog-post">
+                <img src="blog1.jpg" alt="How to Earn Money Online">
+                <h3><a href="blog-details.html">How to Earn Money Online with StreamQash </a></h3>
+                <p>Discover simple ways to earn money online using StreamQash 's platform. From affiliate marketing to trivia, the opportunities are endless!</p>
+                <a href="blog-details.html" class="read-more">Read More</a>
+            </article>
+            
+            <!-- Blog Post 2 -->
+            <article class="blog-post">
+                <img src="blog2.jpg" alt="Tips for Successful Affiliate Marketing">
+                <h3><a href="blog-details.html">5 Tips for Successful Affiliate Marketing</a></h3>
+                <p>Learn the secrets to mastering affiliate marketing and increasing your passive income effectively.</p>
+                <a href="blog-details.html" class="read-more">Read More</a>
+            </article>
+            
+            <!-- Blog Post 3 -->
+            <article class="blog-post">
+                <img src="blog3.webp" alt="Passive Income Streams">
+                <h3><a href="blog-details.html">Top 10 Passive Income Streams for 2025</a></h3>
+                <p>Explore the best passive income streams, including StreamQash , that will boost your earnings in 2025.</p>
+                <a href="blog-details.html" class="read-more">Read More</a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+    <section id="faq" class="faq">
+        
+        <h2> Asked Questions: Answers</h2>
+        <details>
+            <summary>What is StreamQash  Agencies?</summary>
+            <p>StreamQash  is a leading online platform that offers various earning opportunities, empowering individuals to achieve financial freedom. With features like paid surveys, blog writing, affiliate marketing, and more, StreamQash  provides users with multiple ways to earn money from home, anytime, anywhere. The platform is designed for ease of use, offering instant withdrawals, 24/7 support, and global accessibility.</p>
+        </details>
+        <details>
+            <summary>How can I withdraw my earnings?</summary>
+            <p>You can withdraw your earnings anytime and receive instantly through a variety of payment methods, including bank transfer, mobile money and digital wallets.</p>
+        </details>
+        <details>
+        <summary>Is StreamQash  legit?</summary>
+            <p>StreamQash  is a legitimate online platform designed to help users earn money effortlessly through tasks like watching videos, answering trivia, affiliate marketing, and clicking ads. With a transparent system, secure payments, and positive user testimonials, StreamQash  stands out as a reliable and trustworthy solution for anyone looking to achieve financial freedom online.</p>
+        </details>
+        <details>
+        <summary>Who owns StreamQash  project?</summary>
+            <p>StreamQash  is owned by Smarttech Management, a trusted company dedicated to providing innovative online earning opportunities. With a focus on transparency, security, and user satisfaction, Smarttech Management empowers users worldwide to achieve financial freedom.</p>
+        </details>
+        
+    </section>
+    
+    <!-- Testimonials Section -->
+  <section class="testimonials">
+    <!-- Section Header -->
+    <div class="testimonials-header">
+      <h2>What Our Users Are Saying</h2>
+      <p>Hear from our users who have experienced success with StreamQash .</p>
+    </div>
+
+    <!-- Testimonials Carousel -->
+    <div class="testimonials-carousel">
+      <div class="testimonial-card">
+        <img src="profile1.jpg" alt="John Doe" class="profile-pic">
+        <h3>George K</h3>
+        <p class="location">Nairobi, Kenya</p>
+        <div class="rating">
+          <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+        </div>
+        <p class="testimonial-text">
+          StreamQash  has completely transformed how I earn money. Highly recommended!
+        </p>
+      </div>
+      <div class="testimonial-card">
+        <img src="profile2.jpg" alt="Jane Smith" class="profile-pic">
+        <h3>Mentor Jane</h3>
+        <p class="location">Mombasa, Kenya</p>
+        <div class="rating">
+          <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+        </div>
+        <p class="testimonial-text">
+          A fantastic platform! I’ve doubled my income working part-time.
+        </p>
+      </div>
+      <div class="testimonial-card">
+        <img src="profile3.jpg" alt="Michael Lee" class="profile-pic">
+        <h3>Michael Otieno</h3>
+        <p class="location">Kisumu, Kenya</p>
+        <div class="rating">
+          <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+        </div>
+        <p class="testimonial-text">
+          Thanks to StreamQash , I now have financial freedom!
+        </p>
+      </div>
+    </div>
+
+    <!-- Call-to-Action -->
+    <div class="cta">
+      <h3>Ready to join StreamQash ?</h3>
+      <a href="#signup" class="cta-button">Sign Up Now</a>
+    </div>
+  </section>
+  
+  <footer style="background-color: #ffffff; color: #000156; padding: 40px 20px; text-align: center; margin: 0;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <!-- Contact Information -->
+    <div style="margin-bottom: 30px;">
+      <h3 style="font-size: 24px; margin-bottom: 10px;">Contact Us</h3>
+      <p style="margin: 5px 0;"><i class="fa-solid fa-phone"></i> Phone: +254 700 123 456</p>
+      <p style="margin: 5px 0;"><i class="fa-solid fa-envelope"></i> Email: info@streamqash.com</p>
+      <p style="margin: 5px 0;"><i class="fa-solid fa-location"></i> Address: Nairobi, Kenya</p>
+    </div>
+    <!-- Social Media Icons -->
+    <div style="margin-bottom: 30px;">
+      <a href="https://facebook.com" style="color: #55acff; margin: 0 10px; font-size: 24px;" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com" style="color: #000000; margin: 0 10px; font-size: 24px;" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://instagram.com" style="color: #9055ff; margin: 0 10px; font-size: 24px;" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://linkedin.com" style="color: #5597ff; margin: 0 10px; font-size: 24px;" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+    <!-- Footer Links -->
+    <div>
+      <a href="#about" style="color: #fff; margin: 0 15px; text-decoration: none;">About Us</a>
+      <a href="#services" style="color: #fff; margin: 0 15px; text-decoration: none;">Services</a>
+      <a href="#privacy" style="color: #fff; margin: 0 15px; text-decoration: none;">Privacy Policy</a>
+      <a href="#terms" style="color: #fff; margin: 0 15px; text-decoration: none;">Terms of Service</a>
+    </div>
+    <!-- Copyright -->
+    <p style="margin-top: 20px; font-size: 14px; color: #ccc;">&copy; 2025 StreamQash. All rights reserved.</p>
+  </div>
+</footer>
+    
+
+  <script>
+  function toggleMenu() {
+    const menu = document.querySelector('.mobile-menu');
+    menu.classList.toggle('show');
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.querySelector('.testimonials-carousel');
+  let scrollAmount = 0;
+
+  setInterval(() => {
+    scrollAmount += 300; // Adjust scroll speed
+    if (scrollAmount >= carousel.scrollWidth) {
+      scrollAmount = 0;
+    }
+    carousel.scrollTo({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  }, 3000); // Adjust time interval
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const earningMethods = document.querySelectorAll('.earning-method');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  earningMethods.forEach((method) => {
+    method.style.opacity = '0';
+    method.style.transform = 'translateY(20px)';
+    method.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(method);
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,29 +1,610 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HeroQash - Earn money through affiliate marketing, video watching, trivia, and more!">
+    <meta name="keywords" content="HeroQash, network marketing, earn money, affiliate marketing">
+    <meta name="author" content="HeroQash Agencies">
+    <title>HeroQash Agencies</title>
+    <link rel="stylesheet" href="sles.css">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=email" />
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f5f5f5;
+    overflow-x: hidden;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #26ff00;
+    padding: 15px 20px;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #3b00ff;
+}
+header .join-button button {
+    background: #2b6dff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+.whatsapp{
+    font-size: 40px;
+   
+    }
+.whatsapp{
+    font-size: 40px;
+   
+}
+header .hamburger-menu button {
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: #3b00ff;
+    cursor: pointer;
+}
+#side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #4a90e2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+#side-menu.open {
+    right: 0;
+}
+#side-menu a {
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+#side-menu .close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+#welcome {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('team.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+#welcome .welcome-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 2s ease;
+}
+#welcome .btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: #ffd700;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+#welcome .btn:hover {
+    background: #ff9900;
+}
+#features {
+    padding: 50px 20px;
+    background: #fff;
+    text-align: center;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.feature {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.feature img {
+    width: 70px;
+    margin-bottom: 10px;
+}
+/* Audio Section */
+#audio {
+    padding: 50px 20px;
+    text-align: center;
+    background: #e6f7ff;
+}
+.country-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.country-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.country-btn:hover {
+    background: #0056b3;
+}
+#audio-container {
+    margin-top: 20px;
+    animation: fadeIn 1s ease;
+}
+.audio-hidden {
+    display: none;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Happy Clients Section */
+#clients {
+    padding: 50px 20px;
+    background: #f0f8ff;
+    text-align: center;
+}
+
+.client-slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+
+.client {
+    flex-shrink: 0;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+}
+
+.client img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.client p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .client-slider {
+        gap: 10px;
+    }
+
+    .client {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .client {
+        width: 90%;
+    }
+}
+
+/* Reviews Section */
+#reviews {
+    padding: 50px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.review-slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+
+.review {
+    flex-shrink: 0;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.review p:first-child {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.review p:last-child {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Navigation Buttons */
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+footer {
+    background: #4a90e2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+    margin: 0 5px;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    </style>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">HEROQASH</div>
+          <div class="join-button">
+            <button> <a href="https://www.streamwa-ve.com/user/register.php?ref=Bee254" class="btn join-btn">JOIN</a></button>
+          </div>
+        <div class="whatsapp">
+             <a href="https://wa.me/254732424915" class="social-icon">
+      <i class="fab fa-whatsapp"></i> 
+            </a>
+        </div>
+        <div class="hamburger-menu">
+            <button>&#9776;</button>
+        </div>
+        <!-- Side Menu -->
+<div id="side-menu">
+    <span class="close-menu">&times;</span>
+    <nav>
+        <ul>
+            <li><a href="#welcome">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#audio">Audio Summaries</a></li>
+            <li><a href="#clients">Happy Clients</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+</div>
+    </header>
+
+    <!-- Welcome Section -->
+    <section id="welcome">
+        <div class="welcome-content">
+            <h1>Welcome to HeroQash</h1>
+            <p><strong>The ultimate platform where your potential to earn meets endless opportunities! With our trusted management and a vibrant community, you're stepping into a world of growth, excitement, and financial freedom. Get ready to experience a seamless, rewarding journey designed for anyone eager to make the most out of their time. Join us today and unlock the doors to a brighter, more prosperous future!</strong></p>
+            <div class="buttons">
+                <a href="https://www.streamwa-ve.com/user/register.php?ref=Bee254" class="btn">Register</a>
+                <a href="https://wa.me/254732424915" class="btn whatsapp-btn">WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <h2>Our Features</h2>
+        <div class="features-grid">
+            <div class="feature">
+                <img src="ads.jpg" alt="ads clicking">
+                <h3>ADS CLICKING</h3>
+                <p>Earn by interacting with ads that appear on your dashboard. Each time you click on an ad, you contribute to your earnings, turning a simple task into a way to generate income. It's an effortless way to boost your rewards throughout the day.</p>
+            </div>
+            <div class="feature">
+                <img src="video.jpg" alt="Watch Videos">
+                <h3>WATCHING VIDEOS</h3>
+                <p>Watch a variety of videos and get paid for your time. These videos are designed to keep you engaged, whether they are entertaining or educational. It’s an enjoyable way to make money while discovering new content.</p>
+            </div>
+            <div class="feature">
+                <img src="trivia.jpg" alt="Trivia Questions">
+                <h3>TRIVIA QUETIONS</h3>
+                <p>Test your knowledge by answering trivia questions and get rewarded for your correct responses. This fun and interactive method not only sharpens your mind but also helps you earn as you engage with different topics.</p>
+            </div>
+             <div class="feature">
+                <img src="affiliate.jpg" alt="affiliate marketing">
+                <h3>AFFILIATE MARKETING</h3>
+                <p>Here, The more people you help discover the potential of HeroQash, the more you can earn. This method allows you to grow your network and increase your earnings organically.</p>
+            </div>
+             <div class="feature">
+                <img src="forex.jpg" alt="learn forex">
+                <h3>KNOWLEDGE HUB</h3>
+                <p>Promote and expand your knowledge through the HeroQash Knowledge Hub. Here, you can access valuable content that enhances your skills, while also unlocking opportunities to earn more by staying engaged. It’s a great way to continue learning while benefiting from the platform’s offerings.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audio Summaries -->
+    <!-- Audio Section -->
+<section id="audio">
+    <h2>Audio Summaries</h2>
+    <p>Click on your country to get the audio summary:</p>
+    <div class="country-buttons">
+        <button class="country-btn" data-country="kenya">Kenya</button>
+        <button class="country-btn" data-country="Nigeria">Nigeria</button>
+        <button class="country-btn" data-country="Ghana">Ghana</button>
+    </div>
+    <div id="audio-container" class="audio-hidden">
+        <audio controls id="audio-player">
+            <source src="">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</section>
+
+<!-- Happy Clients Section -->
+<!-- Happy Clients Section -->
+<section id="clients">
+    <h2>Meet Our Happy Clients</h2>
+    <div class="client-slider">
+        <div class="client">
+            <img src="lifechanging.jpg" alt="Client 1">
+            <p>"A few months ago, I was drowning in financial struggles, barely surviving day to day. Then, I discovered HeroQash Agencies, and my life took an extraordinary turn. Through their innovative platform and life-altering opportunities, I transitioned from poverty to becoming a self-made millionaire. Today, I enjoy financial freedom, stability, and a life of abundance. HeroQash is not just a service—it’s a gateway to prosperity and success!"</p>
+        </div>
+        <div class="client">
+            <img src="background.jpg" alt="Client 2">
+            <p>"I now earn consistently every day, thanks to HeroQash."</p>
+        </div>
+        <div class="client">
+            <img src="ourteam.jpg" alt="Client 3">
+            <p>"Joining HeroQash was the best decision of my life!"</p>
+        </div>
+        <div class="client">
+            <img src="client4.jpg" alt="Client 4">
+            <p>"With HeroQash, I turned my part-time work into full-time earnings!"</p>
+        </div>
+    </div>
+    <button class="prev-btn" id="prevClient">Previous</button>
+    <button class="next-btn" id="nextClient">Next</button>
+</section>
+
+<!-- Reviews Section -->
+<section id="reviews">
+    <h2>Reviews</h2>
+    <div class="review-slider">
+        <div class="review">
+            <p>★★★★★ - John (Kenya)</p>
+            <p>"Absolutely life-changing! Highly recommend it."</p>
+        </div>
+        <div class="review">
+            <p>★★★★★ - Sarah (Nigeria)</p>
+            <p>"HeroQash made it so easy to earn on the go."</p>
+        </div>
+        <div class="review">
+            <p>★★★★★ - James (Ghana)</p>
+            <p>"Effortless earnings with consistent payouts."</p>
+        </div>
+    </div>
+    <button class="prev-btn" id="prevReview">Previous</button>
+    <button class="next-btn" id="nextReview">Next</button>
+</section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="branding">HeroQash Agencies</div>
+            <div class="contact">
+                <p><img src="location-icon.svg" alt="Location"> Nairobi</p>
+                <p></p>+254 732 424915</p>
+                <p><img src="email-icon.svg" alt="Email">HeroQashagenciess@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="links">
+                <a href="#about">About Us</a>
+                <a href="#features">Features</a>
+                <a href="#welcome">Join Now</a>
+            </div>
+            <p>© 2024 HeroQash Agencies. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Side Menu Toggle
+const menuButton = document.querySelector('.hamburger-menu button');
+const sideMenu = document.getElementById('side-menu');
+const closeMenuButton = document.querySelector('.close-menu');
+
+menuButton.addEventListener('click', () => {
+    sideMenu.classList.add('open');
+});
+
+closeMenuButton.addEventListener('click', () => {
+    sideMenu.classList.remove('open');
+});
+      // Handle Country Audio Selection
+const countryButtons = document.querySelectorAll('.country-btn');
+const audioContainer = document.getElementById('audio-container');
+const audioPlayer = document.getElementById('audio-player');
+
+const audioSources = {
+    kenya: 'khsummary.opus',
+    Nigeria: 'nhsummary.opus',
+    Ghana: 'nhsummary.opus'
+};
+
+countryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const country = button.dataset.country;
+        if (audioSources[country]) {
+            audioPlayer.src = audioSources[country];
+            audioContainer.classList.remove('audio-hidden');
+            audioPlayer.play();
+        }
+    });
+});
+// Client slider functionality
+let currentClientIndex = 0;
+const clientSlides = document.querySelectorAll('.client');
+const clientSlider = document.querySelector('.client-slider');
+const prevClientButton = document.getElementById('prevClient');
+const nextClientButton = document.getElementById('nextClient');
+
+// Review slider functionality
+let currentReviewIndex = 0;
+const reviewSlides = document.querySelectorAll('.review');
+const reviewSlider = document.querySelector('.review-slider');
+const prevReviewButton = document.getElementById('prevReview');
+const nextReviewButton = document.getElementById('nextReview');
+
+// Function to update the client slider position
+function updateClientSlider() {
+    clientSlider.style.transform = `translateX(-${currentClientIndex * 100}%)`;
+}
+
+// Function to update the review slider position
+function updateReviewSlider() {
+    reviewSlider.style.transform = `translateX(-${currentReviewIndex * 100}%)`;
+}
+
+// Event listeners for the client slider
+nextClientButton.addEventListener('click', () => {
+    if (currentClientIndex < clientSlides.length - 1) {
+        currentClientIndex++;
+    } else {
+        currentClientIndex = 0; // Loop back to the first slide
+    }
+    updateClientSlider();
+});
+
+prevClientButton.addEventListener('click', () => {
+    if (currentClientIndex > 0) {
+        currentClientIndex--;
+    } else {
+        currentClientIndex = clientSlides.length - 1; // Loop back to the last slide
+    }
+    updateClientSlider();
+});
+
+// Event listeners for the review slider
+nextReviewButton.addEventListener('click', () => {
+    if (currentReviewIndex < reviewSlides.length - 1) {
+        currentReviewIndex++;
+    } else {
+        currentReviewIndex = 0; // Loop back to the first slide
+    }
+    updateReviewSlider();
+});
+
+prevReviewButton.addEventListener('click', () => {
+    if (currentReviewIndex > 0) {
+        currentReviewIndex--;
+    } else {
+        currentReviewIndex = reviewSlides.length - 1; // Loop back to the last slide
+    }
+    updateReviewSlider();
+});
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="StreamQash is a leading online platform that provides multiple streams of income, including affiliate marketing, trivia, and video ads. Transform your financial life today!">
-  <meta name="keywords" content="StreamQash, online earning, affiliate marketing, trivia questions, video ads, make money online, passive income, financial freedom">
-  <meta name="author" content="StreamQash Team">
+  <meta name="description" content="HeroQash is a leading online platform that provides multiple streams of income, including affiliate marketing, trivia, and video ads. Transform your financial life today!">
+  <meta name="keywords" content="HeroQash, online earning, affiliate marketing, trivia questions, video ads, make money online, passive income, financial freedom">
+  <meta name="author" content="HeroQash Team">
   
   <!-- Open Graph Meta Tags for Social Sharing -->
-  <meta property="og:title" content="StreamQash - Transform Your Financial Life Online">
-  <meta property="og:description" content="Discover how StreamQash helps you earn money online through affiliate marketing, trivia, and more. Start your journey to financial freedom today!">
+  <meta property="og:title" content="HeroQash - Transform Your Financial Life Online">
+  <meta property="og:description" content="Discover how HeroQash helps you earn money online through affiliate marketing, trivia, and more. Start your journey to financial freedom today!">
   <meta property="og:image" content="background.jpg">
-  <meta property="og:url" content="https://streamqash.com">
+  <meta property="og:url" content="https://HeroQash.com">
   <meta property="og:type" content="website">
   
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="StreamQash - Transform Your Financial Life Online">
-  <meta name="twitter:description" content="Earn money online with StreamQash! Engage in affiliate marketing, trivia, and video ads to boost your income.">
+  <meta name="twitter:title" content="HeroQash - Transform Your Financial Life Online">
+  <meta name="twitter:description" content="Earn money online with HeroQash! Engage in affiliate marketing, trivia, and video ads to boost your income.">
   <meta name="twitter:image" content="background.jpg">
   
   <!-- Robots and Canonical URL -->
   <meta name="robots" content="index, follow">
   
-  <title>StreamQash - Transform Your Financial Life Online</title>
+  <title>HeroQash - Transform Your Financial Life Online</title>
   
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -486,7 +1067,7 @@ body {
 </head>
 <body>
 <header class="fixed-header">
-  <div class="logo">STREAMQASH</div>
+  <div class="logo">HeroQash</div>
  <a href="#"><button class="get-started">Get Started</button></a>
   <div class="hamburger" onclick="toggleMenu()">
     <span></span>
@@ -543,14 +1124,14 @@ body {
   
   <section id="about" style="background-color: #e9f5ff; padding: 60px 20px; text-align: center;">
   <div class="container" style="max-width: 1200px; margin: 0 auto;">
-    <h2 style="font-size: 36px; color: #003366; margin-bottom: 20px;">What is StreamQash Agencies?</h2>
+    <h2 style="font-size: 36px; color: #003366; margin-bottom: 20px;">What is HeroQash Agencies?</h2>
     <p style="font-size: 18px; color: #333; line-height: 1.6; max-width: 800px; margin: 0 auto; padding-bottom: 30px;">
-      StreamQash Agencies is an innovative online platform that provides multiple streams to earn income through digital and network marketing. With StreamQash, users can tap into various opportunities to generate revenue, whether through managing referrals, promoting services, or expanding their reach. The platform empowers users to create scalable income streams by leveraging the power of online networks, offering flexible earning potential and the tools to succeed in the digital economy. It's the perfect solution for businesses and individuals looking to transform their financial future.
+      HeroQash Agencies is an innovative online platform that provides multiple streams to earn income through digital and network marketing. With HeroQash, users can tap into various opportunities to generate revenue, whether through managing referrals, promoting services, or expanding their reach. The platform empowers users to create scalable income streams by leveraging the power of online networks, offering flexible earning potential and the tools to succeed in the digital economy. It's the perfect solution for businesses and individuals looking to transform their financial future.
     </p>
     <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
       <div style="max-width: 800px; background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
         <h3 style="font-size: 24px; color: #003366; margin-bottom: 10px;">Diverse Earning Opportunities</h3>
-        <p style="color: #666;">StreamQash Agencies provides multiple ways to earn, making it easy to choose a path that suits your skills and interests.</p>
+        <p style="color: #666;">HeroQash Agencies provides multiple ways to earn, making it easy to choose a path that suits your skills and interests.</p>
       </div>
       <div style="max-width: 800px; background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
         <h3 style="font-size: 24px; color: #003366; margin-bottom: 10px;">Scalable Income</h3>
@@ -558,7 +1139,7 @@ body {
       </div>
       <div style="max-width: 800px; background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
         <h3 style="font-size: 24px; color: #003366; margin-bottom: 10px;">Transform Your Financial Future</h3>
-        <p style="color: #666;">StreamQash Agencies helps you achieve financial independence with the tools, support, and opportunities to thrive online.</p>
+        <p style="color: #666;">HeroQash Agencies helps you achieve financial independence with the tools, support, and opportunities to thrive online.</p>
       </div>
     </div>
   </div>
@@ -569,7 +1150,7 @@ body {
     <!-- Section Header -->
     <div class="earnings-header">
       <h2>How We Make It Happen</h2>
-      <p>Explore the multiple ways you can earn with StreamQash .</p>
+      <p>Explore the multiple ways you can earn with HeroQash .</p>
     </div>
 
     <!-- Earnings Methods -->
@@ -578,28 +1159,28 @@ body {
       <div class="earning-method">
         <img src="affiliate.webp" alt="Network marketing" class="earning-image">
         <h3>Affiliate Marketing Bonuses</h3>
-        <p>Affiliate marketing on StreamQash allows you to earn commissions by promoting products or services to others. You can share referral links with friends or through your social media, and whenever someone makes a purchase or takes an action using your link, you earn a percentage of the sale. This is a fantastic opportunity for users who enjoy networking or have a social following, as it provides an income stream based on your promotional efforts.</p>
+        <p>Affiliate marketing on HeroQash allows you to earn commissions by promoting products or services to others. You can share referral links with friends or through your social media, and whenever someone makes a purchase or takes an action using your link, you earn a percentage of the sale. This is a fantastic opportunity for users who enjoy networking or have a social following, as it provides an income stream based on your promotional efforts.</p>
       </div>
 
       <!-- Method 2 -->
       <div class="earning-method">
         <img src="trivia.jpg" alt="Trivia Games to earn" class="earning-image">
         <h3>Trivia Questions</h3>
-        <p>Trivia games are fun and engaging, and StreamQash uses them as an interactive way for users to earn money. By answering trivia questions correctly, you accumulate points or direct earnings. It's not only a way to test your knowledge but also a great way to earn money while enjoying the challenge. The more questions you answer correctly, the higher your potential earnings.</p>
+        <p>Trivia games are fun and engaging, and HeroQash uses them as an interactive way for users to earn money. By answering trivia questions correctly, you accumulate points or direct earnings. It's not only a way to test your knowledge but also a great way to earn money while enjoying the challenge. The more questions you answer correctly, the higher your potential earnings.</p>
       </div>
 
       <!-- Method 3 -->
       <div class="earning-method">
         <img src="video.jpg" alt="Watch Videos to earn" class="earning-image">
         <h3>Watch Promoted Videos</h3>
-        <p>StreamQash partners with brands and businesses to promote their products or services through video ads. As a user, you can watch these short, engaging videos, and in return, you earn a payout. This method is an easy way to earn money while enjoying interesting content. The more videos you watch, the more you can earn, creating a passive income stream.</p>
+        <p>HeroQash partners with brands and businesses to promote their products or services through video ads. As a user, you can watch these short, engaging videos, and in return, you earn a payout. This method is an easy way to earn money while enjoying interesting content. The more videos you watch, the more you can earn, creating a passive income stream.</p>
       </div>
 
       <!-- Method 4 -->
       <div class="earning-method">
         <img src="ads.jpg" alt="Earn per click" class="earning-image">
         <h3>Clicking Sponsored Ads</h3>
-        <p>Sponsored ads are an essential part of the digital marketing world, and StreamQash allows you to earn by simply clicking on these ads. When you engage with these ads, the advertisers pay you for driving traffic to their website or service. This method requires minimal effort, and by regularly clicking on these ads, you can steadily grow your earnings.</p>
+        <p>Sponsored ads are an essential part of the digital marketing world, and HeroQash allows you to earn by simply clicking on these ads. When you engage with these ads, the advertisers pay you for driving traffic to their website or service. This method requires minimal effort, and by regularly clicking on these ads, you can steadily grow your earnings.</p>
       </div>
     </div>
   </section>
@@ -633,8 +1214,8 @@ body {
             <!-- Blog Post 1 -->
             <article class="blog-post">
                 <img src="blog1.jpg" alt="How to Earn Money Online">
-                <h3><a href="blog-details.html">How to Earn Money Online with StreamQash </a></h3>
-                <p>Discover simple ways to earn money online using StreamQash 's platform. From affiliate marketing to trivia, the opportunities are endless!</p>
+                <h3><a href="blog-details.html">How to Earn Money Online with HeroQash </a></h3>
+                <p>Discover simple ways to earn money online using HeroQash 's platform. From affiliate marketing to trivia, the opportunities are endless!</p>
                 <a href="blog-details.html" class="read-more">Read More</a>
             </article>
             
@@ -650,7 +1231,7 @@ body {
             <article class="blog-post">
                 <img src="blog3.webp" alt="Passive Income Streams">
                 <h3><a href="blog-details.html">Top 10 Passive Income Streams for 2025</a></h3>
-                <p>Explore the best passive income streams, including StreamQash , that will boost your earnings in 2025.</p>
+                <p>Explore the best passive income streams, including HeroQash , that will boost your earnings in 2025.</p>
                 <a href="blog-details.html" class="read-more">Read More</a>
             </article>
         </div>
@@ -662,20 +1243,20 @@ body {
         
         <h2> Asked Questions: Answers</h2>
         <details>
-            <summary>What is StreamQash  Agencies?</summary>
-            <p>StreamQash  is a leading online platform that offers various earning opportunities, empowering individuals to achieve financial freedom. With features like paid surveys, blog writing, affiliate marketing, and more, StreamQash  provides users with multiple ways to earn money from home, anytime, anywhere. The platform is designed for ease of use, offering instant withdrawals, 24/7 support, and global accessibility.</p>
+            <summary>What is HeroQash  Agencies?</summary>
+            <p>HeroQash  is a leading online platform that offers various earning opportunities, empowering individuals to achieve financial freedom. With features like paid surveys, blog writing, affiliate marketing, and more, HeroQash  provides users with multiple ways to earn money from home, anytime, anywhere. The platform is designed for ease of use, offering instant withdrawals, 24/7 support, and global accessibility.</p>
         </details>
         <details>
             <summary>How can I withdraw my earnings?</summary>
             <p>You can withdraw your earnings anytime and receive instantly through a variety of payment methods, including bank transfer, mobile money and digital wallets.</p>
         </details>
         <details>
-        <summary>Is StreamQash  legit?</summary>
-            <p>StreamQash  is a legitimate online platform designed to help users earn money effortlessly through tasks like watching videos, answering trivia, affiliate marketing, and clicking ads. With a transparent system, secure payments, and positive user testimonials, StreamQash  stands out as a reliable and trustworthy solution for anyone looking to achieve financial freedom online.</p>
+        <summary>Is HeroQash  legit?</summary>
+            <p>HeroQash  is a legitimate online platform designed to help users earn money effortlessly through tasks like watching videos, answering trivia, affiliate marketing, and clicking ads. With a transparent system, secure payments, and positive user testimonials, HeroQash  stands out as a reliable and trustworthy solution for anyone looking to achieve financial freedom online.</p>
         </details>
         <details>
-        <summary>Who owns StreamQash  project?</summary>
-            <p>StreamQash  is owned by Smarttech Management, a trusted company dedicated to providing innovative online earning opportunities. With a focus on transparency, security, and user satisfaction, Smarttech Management empowers users worldwide to achieve financial freedom.</p>
+        <summary>Who owns HeroQash  project?</summary>
+            <p>HeroQash  is owned by Smarttech Management, a trusted company dedicated to providing innovative online earning opportunities. With a focus on transparency, security, and user satisfaction, Smarttech Management empowers users worldwide to achieve financial freedom.</p>
         </details>
         
     </section>
@@ -685,7 +1266,7 @@ body {
     <!-- Section Header -->
     <div class="testimonials-header">
       <h2>What Our Users Are Saying</h2>
-      <p>Hear from our users who have experienced success with StreamQash .</p>
+      <p>Hear from our users who have experienced success with HeroQash .</p>
     </div>
 
     <!-- Testimonials Carousel -->
@@ -698,7 +1279,7 @@ body {
           <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
         </div>
         <p class="testimonial-text">
-          StreamQash  has completely transformed how I earn money. Highly recommended!
+          HeroQash  has completely transformed how I earn money. Highly recommended!
         </p>
       </div>
       <div class="testimonial-card">
@@ -720,14 +1301,14 @@ body {
           <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
         </div>
         <p class="testimonial-text">
-          Thanks to StreamQash , I now have financial freedom!
+          Thanks to HeroQash , I now have financial freedom!
         </p>
       </div>
     </div>
 
     <!-- Call-to-Action -->
     <div class="cta">
-      <h3>Ready to join StreamQash ?</h3>
+      <h3>Ready to join HeroQash ?</h3>
       <a href="#signup" class="cta-button">Sign Up Now</a>
     </div>
   </section>
@@ -738,7 +1319,7 @@ body {
     <div style="margin-bottom: 30px;">
       <h3 style="font-size: 24px; margin-bottom: 10px;">Contact Us</h3>
       <p style="margin: 5px 0;"><i class="fa-solid fa-phone"></i> Phone: +254 700 123 456</p>
-      <p style="margin: 5px 0;"><i class="fa-solid fa-envelope"></i> Email: info@streamqash.com</p>
+      <p style="margin: 5px 0;"><i class="fa-solid fa-envelope"></i> Email: info@HeroQash.com</p>
       <p style="margin: 5px 0;"><i class="fa-solid fa-location"></i> Address: Nairobi, Kenya</p>
     </div>
     <!-- Social Media Icons -->
@@ -764,7 +1345,7 @@ body {
       <a href="#terms" style="color: #fff; margin: 0 15px; text-decoration: none;">Terms of Service</a>
     </div>
     <!-- Copyright -->
-    <p style="margin-top: 20px; font-size: 14px; color: #ccc;">&copy; 2025 StreamQash. All rights reserved.</p>
+    <p style="margin-top: 20px; font-size: 14px; color: #ccc;">&copy; 2025 HeroQash. All rights reserved.</p>
   </div>
 </footer>
     
@@ -814,4 +1395,4 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 </body>
-</html>
+  </html>
